@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" style="-fx-background-color: gold;" styleClass="photo" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.menuController">
+   <children>
+      <Button fx:id="btOrder" layoutX="75.0" layoutY="50.0" mnemonicParsing="false" onAction="#Order" prefHeight="118.0" prefWidth="188.0" style="-fx-background-radius: 50;" stylesheets="@application.css" />
+      <Label layoutX="138.0" layoutY="94.0" prefHeight="30.0" prefWidth="61.0" text="Orders">
+         <font>
+            <Font name="System Italic" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btItem" layoutX="312.0" layoutY="50.0" mnemonicParsing="false" onAction="#Item" prefHeight="118.0" prefWidth="188.0" style="-fx-background-radius: 50;" stylesheets="@application.css" />
+      <Label layoutX="378.0" layoutY="93.0" prefHeight="27.0" prefWidth="54.0" text="Items">
+         <font>
+            <Font name="System Italic" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="btFeed" layoutX="313.0" layoutY="182.0" mnemonicParsing="false" onAction="#Feedback" prefHeight="118.0" prefWidth="188.0" style="-fx-background-radius: 50;" stylesheets="@application.css" />
+      <Label layoutX="367.0" layoutY="227.0" prefHeight="27.0" prefWidth="77.0" text="Feedback">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btEmp" layoutX="75.0" layoutY="182.0" mnemonicParsing="false" onAction="#Emp" prefHeight="118.0" prefWidth="188.0" style="-fx-background-radius: 50;" stylesheets="@application.css" />
+      <Label layoutX="118.0" layoutY="227.0" prefHeight="27.0" prefWidth="88.0" text="Employees">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btLogout" layoutX="218.0" layoutY="361.0" mnemonicParsing="false" onAction="#LogOut" prefHeight="43.0" prefWidth="146.0" stylesheets="@application.css">
+         <graphic>
+            <Label prefHeight="17.0" prefWidth="48.0" text="Logout!" />
+         </graphic>
+      </Button>
+      <ImageView fitHeight="316.0" fitWidth="243.0" layoutX="582.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@hmmm.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="220.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logout.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

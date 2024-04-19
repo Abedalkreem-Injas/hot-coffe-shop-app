@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="651.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.sign_upController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="-1.0" layoutY="5.0" prefHeight="631.0" prefWidth="762.0">
+               <children>
+                  <ImageView fitHeight="604.0" fitWidth="218.0">
+                     <image>
+                        <Image url="@hotcoffee.jpg" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" prefHeight="524.0" prefWidth="446.0" spacing="20.0">
+                     <Label prefHeight="26.0" prefWidth="334.0" text="Sign Up As Hot Coffee Employee ">
+                        <font>
+                           <Font name="Maiandra GD" size="22.0" />
+                        </font>
+                        <VBox.margin>
+                           <Insets top="20.0" />
+                        </VBox.margin>
+                        <effect>
+                           <ColorAdjust brightness="-1.0" contrast="-0.06" hue="-0.13" saturation="-0.17" />
+                        </effect>
+                     </Label>
+                     <HBox prefHeight="36.0" prefWidth="410.0">
+                        <children>
+                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="152.0" text="Username:" textAlignment="CENTER" textFill="#562400" textOverrun="CLIP">
+                              <font>
+                                 <Font name="Maiandra GD" size="17.0" />
+                              </font>
+                           </Label>
+                           <TextField fx:id="nameTextField" accessibleHelp="Enter Here" prefHeight="30.0" prefWidth="270.0">
+                              <font>
+                                 <Font name="Dubai Regular" size="12.0" />
+                              </font>
+                           </TextField>
+                        </children>
+                     </HBox>
+                     <HBox prefHeight="30.0" prefWidth="410.0">
+                        <children>
+                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="152.0" text="ID:" textAlignment="CENTER" textFill="#562400" textOverrun="CLIP">
+                              <font>
+                                 <Font name="Maiandra GD" size="17.0" />
+                              </font>
+                           </Label>
+                           <TextField fx:id="idTextField" accessibleHelp="Enter Here" prefHeight="30.0" prefWidth="270.0">
+                              <font>
+                                 <Font name="Dubai Regular" size="12.0" />
+                              </font>
+                           </TextField>
+                        </children>
+                     </HBox>
+                     <HBox layoutX="10.0" layoutY="220.0" prefHeight="29.0" prefWidth="410.0">
+                        <children>
+                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="152.0" text="Birthdate:" textAlignment="CENTER" textFill="#562400" textOverrun="CLIP">
+                              <font>
+                                 <Font name="Maiandra GD" size="17.0" />
+                              </font>
+                           </Label>
+                           <DatePicker fx:id="birthdatePicker" prefHeight="26.0" prefWidth="270.0" />
+                        </children>
+                     </HBox>
+                     <HBox layoutX="10.0" layoutY="188.0" prefHeight="36.0" prefWidth="481.0">
+                        <children>
+                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="152.0" text="Phone Number:" textAlignment="CENTER" textFill="#562400" textOverrun="CLIP">
+                              <font>
+                                 <Font name="Maiandra GD" size="17.0" />
+                              </font>
+                           </Label>
+                           <TextField fx:id="phoneNumberTextField" accessibleHelp="Enter Here" prefHeight="30.0" prefWidth="270.0">
+                              <font>
+                                 <Font name="Dubai Regular" size="12.0" />
+                              </font>
+                           </TextField>
+                        </children>
+                     </HBox>
+                     <HBox layoutX="10.0" layoutY="267.0" prefHeight="30.0" prefWidth="410.0">
+                        <children>
+                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="152.0" text="Address:" textAlignment="CENTER" textFill="#562400" textOverrun="CLIP">
+                              <font>
+                                 <Font name="Maiandra GD" size="17.0" />
+                              </font>
+                           </Label>
+                           <TextField fx:id="addressTextField" accessibleHelp="Enter Here" prefHeight="30.0" prefWidth="270.0">
+                              <font>
+                                 <Font name="Dubai Regular" size="12.0" />
+                              </font>
+                           </TextField>
+                        </children>
+                     </HBox>
+                     <HBox layoutX="10.0" layoutY="292.0" prefHeight="30.0" prefWidth="410.0">
+                        <children>
+                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="152.0" text="Gender:" textAlignment="CENTER" textFill="#562400" textOverrun="CLIP">
+                              <font>
+                                 <Font name="Maiandra GD" size="17.0" />
+                              </font>
+                           </Label>
+                           <TextField fx:id="genderTextField" accessibleHelp="Enter Here" prefHeight="30.0" prefWidth="270.0">
+                              <font>
+                                 <Font name="Dubai Regular" size="12.0" />
+                              </font>
+                           </TextField>
+                        </children>
+                     </HBox>
+                     <HBox layoutX="10.0" layoutY="377.0" prefHeight="30.0" prefWidth="410.0">
+                        <children>
+                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="152.0" text="Salary:" textAlignment="CENTER" textFill="#562400" textOverrun="CLIP">
+                              <font>
+                                 <Font name="Maiandra GD" size="17.0" />
+                              </font>
+                           </Label>
+                           <TextField fx:id="salaryTextField" accessibleHelp="Enter Here" prefHeight="14.0" prefWidth="270.0">
+                              <font>
+                                 <Font name="Dubai Regular" size="12.0" />
+                              </font>
+                           </TextField>
+                        </children>
+                     </HBox>
+                     <HBox layoutX="10.0" layoutY="354.0" prefHeight="30.0" prefWidth="410.0">
+                        <children>
+                           <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="152.0" text="Password:" textAlignment="CENTER" textFill="#562400" textOverrun="CLIP">
+                              <font>
+                                 <Font name="Maiandra GD" size="17.0" />
+                              </font>
+                           </Label>
+                           <PasswordField fx:id="passwordField" prefHeight="26.0" prefWidth="271.0" />
+                        </children>
+                     </HBox>
+                     <HBox layoutX="10.0" layoutY="424.0" prefHeight="39.0" prefWidth="270.0" spacing="50.0">
+                        <children>
+                           <Button fx:id="signUpButton" alignment="CENTER" blendMode="DARKEN" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="39.0" prefWidth="117.0" text="SIGN UP">
+                              <font>
+                                 <Font name="Maiandra GD" size="20.0" />
+                              </font>
+                              <effect>
+                                 <DropShadow blurType="ONE_PASS_BOX" height="23.34" radius="17.6175" spread="0.09" width="49.13">
+                                    <color>
+                                       <Color red="0.4000000059604645" green="0.18000000715255737" />
+                                    </color>
+                                 </DropShadow>
+                              </effect>
+                              <HBox.margin>
+                                 <Insets left="20.0" />
+                              </HBox.margin>
+                           </Button>
+                           <Button fx:id="loginbutton" alignment="CENTER" blendMode="DARKEN" contentDisplay="CENTER" mnemonicParsing="false" onAction="#loginbuttonaction" prefHeight="39.0" prefWidth="183.0" text="Back To Log In" textFill="#813400">
+                              <font>
+                                 <Font name="Maiandra GD" size="20.0" />
+                              </font>
+                              <effect>
+                                 <DropShadow blurType="ONE_PASS_BOX" height="23.34" radius="17.6175" spread="0.09" width="49.13">
+                                    <color>
+                                       <Color red="0.4000000059604645" green="0.18000000715255737" />
+                                    </color>
+                                 </DropShadow>
+                              </effect>
+                           </Button>
+                        </children>
+                        <VBox.margin>
+                           <Insets bottom="20.0" />
+                        </VBox.margin>
+                     </HBox>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

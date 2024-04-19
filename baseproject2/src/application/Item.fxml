@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="807.0" prefWidth="1165.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.itemController">
+   <center>
+		<AnchorPane prefHeight="808.0" prefWidth="1223.0" styleClass="photo" stylesheets="@application.css" BorderPane.alignment="CENTER">
+			<children>
+				<TableView fx:id="itemTableData" layoutX="25.0" layoutY="58.0" prefHeight="336.0" prefWidth="370.0">
+					<columns>
+    <TableColumn fx:id="par_codeColumn" prefWidth="93.0" text="Item ID" />
+    <TableColumn fx:id="item_nameColumn" prefWidth="84.0" text="Item Name" />
+    <TableColumn fx:id="Price" prefWidth="81.0" text="Item Price" />
+    <TableColumn fx:id="QntyClmn" prefWidth="106.39996337890625" text="Quantity" />
+</columns>
+					
+					<opaqueInsets>
+						<Insets />
+					</opaqueInsets>
+				</TableView>
+				<Button fx:id="UpdateBtn" layoutX="406.0" layoutY="491.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="32.0" prefWidth="87.0" style="-fx-background-radius: 50;" stylesheets="@application.css" text="       Update">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+				<Label layoutX="9.0" layoutY="397.0" prefHeight="23.0" prefWidth="97.0" style="-fx-background-color: white;" text="Update Item " textFill="#fc0000">
+					<font>
+						<Font name="Bell MT Bold" size="16.0" />
+					</font>
+				</Label>
+				<TextField fx:id="oldParcode" layoutX="284.0" layoutY="407.0" prefHeight="34.0" prefWidth="113.0" promptText="Old Item ID" />
+				<TextField fx:id="updatedID" layoutX="284.0" layoutY="450.0" prefHeight="32.0" prefWidth="115.0" promptText="New ID" />
+				<TextField fx:id="updatedName" layoutX="404.0" layoutY="450.0" prefHeight="32.0" prefWidth="118.0" promptText="New Name" />
+				<TextField fx:id="updatedQnty" layoutX="657.0" layoutY="450.0" prefHeight="31.0" prefWidth="120.0" promptText="New Quantity" />
+				<Label layoutX="11.0" layoutY="13.0" prefHeight="18.0" prefWidth="151.0" style="-fx-underline: true; -fx-background-color: white;" styleClass="text" stylesheets="@application.css" text="Search For an Item :">
+					<font>
+						<Font name="Arial Bold" size="15.0" />
+					</font>
+				</Label>
+				<TextField fx:id="SearchField" layoutX="175.0" layoutY="8.0" prefHeight="39.0" prefWidth="260.0" promptText="Search Full Name Or Item ID" style="-fx-background-radius: 50;" />
+				<TextField fx:id="DeleteParcode" layoutX="123.0" layoutY="532.0" prefHeight="35.0" prefWidth="104.0" promptText="Item ID" />
+				<Button fx:id="DeleteBtn" layoutX="287.0" layoutY="541.0" mnemonicParsing="false" onAction="#deleteOnAction" prefHeight="34.0" prefWidth="106.0" style="-fx-background-radius: 50;" stylesheets="@application.css" text="   Delete">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+				<Line endX="937.4000244140625" layoutX="232.0" layoutY="533.0" startX="-182.40708923339844" stroke="#1b1a1a" />
+				<Label layoutX="10.0" layoutY="537.0" prefHeight="21.0" prefWidth="99.0" style="-fx-background-color: white;" text="Delete Item" textFill="#fc0000">
+					<font>
+						<Font name="Arial Bold" size="18.0" />
+					</font>
+				</Label>
+				<Label layoutX="10.0" layoutY="597.0" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: white;" text="Add Item" textFill="#f50505">
+					<font>
+						<Font name="Arial Bold" size="21.0" />
+					</font>
+				</Label>
+				<TextField fx:id="addQuantity" layoutX="525.0" layoutY="594.0" prefHeight="31.0" prefWidth="126.0" promptText="New Quantity" />
+				<Button fx:id="addBtn" layoutX="305.0" layoutY="641.0" mnemonicParsing="false" onAction="#addOnAction" prefHeight="30.0" prefWidth="73.0" style="-fx-background-radius: 50;" stylesheets="@application.css" text="       Add">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+				<Label layoutX="122.0" layoutY="450.0" prefHeight="22.0" prefWidth="152.0" style="-fx-background-color: white;" text="Enter the new values: " textFill="#282525">
+               <font>
+                  <Font name="Bell MT" size="16.0" />
+               </font></Label>
+            <TextField fx:id="updatedPrice" layoutX="527.0" layoutY="450.0" prefHeight="31.0" prefWidth="122.0" promptText="New Price" />
+            <Line endX="783.0" endY="-63.0" layoutX="388.0" layoutY="655.0" startX="-336.9928283691406" startY="-63.0" stroke="#333131" />
+            <TextField fx:id="addName" layoutX="254.0" layoutY="595.0" prefHeight="30.0" prefWidth="121.0" promptText="New Name" />
+            <TextField fx:id="Addprice" layoutX="385.0" layoutY="594.0" prefHeight="32.0" prefWidth="129.0" promptText="New Price" />
+            <Button fx:id="BackButton" layoutX="442.0" layoutY="318.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="34.0" prefWidth="100.0" style="-fx-background-radius: 50;" stylesheets="@application.css" text="      Back" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="RefreshBtn" layoutX="445.0" layoutY="156.0" mnemonicParsing="false" onAction="#refreshOnAction" prefHeight="36.0" prefWidth="96.0" style="-fx-background-radius: 50;" stylesheets="@application.css" text="        Refresh" textFill="#534a4a">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Line endX="761.0" endY="-65.20709228515625" layoutX="360.0" layoutY="460.0" startX="-355.699951171875" startY="-65.20709228515625" stroke="#333131" />
+            <Label layoutX="122.0" layoutY="413.0" prefHeight="22.0" prefWidth="149.0" style="-fx-background-color: white;" text="Enter the item's data: " textFill="#282525">
+               <font>
+                  <Font name="Bell MT" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="searchButton" layoutX="448.0" layoutY="42.0" mnemonicParsing="false" onAction="#SearchOnAction" prefHeight="32.0" prefWidth="90.0" style="-fx-background-radius: 50;" stylesheets="@application.css" text="      Search">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="AddItemId" layoutX="128.0" layoutY="595.0" prefHeight="31.0" prefWidth="121.0" promptText="Item ID" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="577.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@krep.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="736.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@fashafesh.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="245.0" layoutX="577.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@kortos.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="130.0" layoutX="703.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Milkshake.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="41.0" layoutX="446.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@back.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="35.0" layoutX="291.0" layoutY="545.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@error.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="309.0" layoutY="644.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@add.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="29.0" fitWidth="25.0" layoutX="455.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@search.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="35.0" layoutX="449.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@refresh.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="24.0" layoutX="416.0" layoutY="494.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@update.png" />
+               </image>
+            </ImageView>
+
+			</children>
+		</AnchorPane>
+   </center>
+</BorderPane>

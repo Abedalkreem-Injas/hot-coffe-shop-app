@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="807.0" prefWidth="900.0" style="-fx-background-color: pink;" styleClass="photo" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.employeeController">
+   <left>
+		<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="767.0" prefWidth="1358.0" styleClass="photo" stylesheets="@application.css" BorderPane.alignment="CENTER">
+			<children>
+      				<TableView fx:id="TableData" layoutX="1.0" layoutY="483.0" prefHeight="322.0" prefWidth="1171.0" AnchorPane.rightAnchor="336.0">
+      					<columns>
+      						<TableColumn fx:id="TableEmpID" prefWidth="100.0" text="Employee ID" />
+                  <TableColumn fx:id="TableEmpName" prefWidth="232.0" text="Employee Name" />
+                  <TableColumn fx:id="TableEmpBirth" prefWidth="153.5999755859375" text="Birthdate" />
+                  <TableColumn fx:id="TableEmpAddress" prefWidth="163.199951171875" text="Address" />
+                  <TableColumn fx:id="TableEmpSalary" prefWidth="133.60009765625" text="Salary" />
+                  <TableColumn fx:id="TableEmpPhone" prefWidth="111.199951171875" text="Phone number" />
+                  <TableColumn fx:id="TableEmpGender" prefWidth="107.9999877929688" text="Gender" />
+                  <TableColumn fx:id="TableEmpPass" prefWidth="163.199951171875" text="Password" />
+      					</columns>
+      					<opaqueInsets>
+      						<Insets />
+      					</opaqueInsets>
+      				</TableView>
+				<Button fx:id="UpdateBtn" layoutX="1018.0" layoutY="47.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="34.0" prefWidth="125.0" style="-fx-background-radius: 50;" stylesheets="@application.css" text="      UPDATE">
+               <font>
+                  <Font name="Maiandra GD" size="17.0" />
+               </font>
+               <effect>
+                  <DropShadow height="13.98" radius="5.905" width="11.64" />
+               </effect></Button>
+				<Label layoutX="22.0" layoutY="29.0" prefHeight="34.0" prefWidth="221.0" text="Update employee's data ">
+					<font>
+						<Font name="Maiandra GD" size="19.0" />
+					</font>
+				</Label>
+				<TextField fx:id="oldempID" layoutX="256.0" layoutY="25.0" prefHeight="34.0" prefWidth="158.0" promptText="Employee ID" />
+				<TextField fx:id="updatedPhone" layoutX="512.0" layoutY="74.0" prefHeight="30.0" prefWidth="153.0" promptText="New phone number" />
+            <PasswordField fx:id="updatedPassword" layoutX="809.0" layoutY="77.0" promptText="New Password" />
+				<TextField fx:id="updatedSalary" layoutX="376.0" layoutY="72.0" prefHeight="31.0" prefWidth="125.0" promptText="New Salary" />
+				<TextField fx:id="SearchFiled" layoutX="256.0" layoutY="423.0" prefHeight="31.0" prefWidth="245.0" promptText="Search ID" style="-fx-background-radius: 50;" />
+            <Line endX="1348.0001220703125" endY="-71.33338165283203" layoutX="-128.0" layoutY="199.0" startX="130.00001525878906" startY="-71.33338165283203" stroke="#000a94" strokeWidth="0.5">
+               <effect>
+                  <BoxBlur />
+               </effect></Line>
+            <TextField fx:id="DeleteEmpId" layoutX="230.0" layoutY="171.0" prefHeight="34.0" prefWidth="184.0" promptText="Employee ID" />
+            <Line endX="647.199951171875" endY="-61.000003814697266" layoutX="-415.0" layoutY="90.0" startX="647.199951171875" startY="-17.400009155273438" stroke="#333131" />
+            <TextField fx:id="updatedID" layoutX="437.0" layoutY="26.0" prefHeight="31.0" prefWidth="114.0" promptText="New ID" />
+            <DatePicker fx:id="updatedBirthDate" layoutX="737.0" layoutY="26.0" prefHeight="32.0" prefWidth="161.0" promptText="Birthdate" />
+            <TextField fx:id="updatedName" layoutX="574.0" layoutY="26.0" prefHeight="31.0" prefWidth="134.0" promptText="New Name" />
+            <Button fx:id="FindAvg" layoutX="909.0" layoutY="216.0" mnemonicParsing="false" onAction="#FindAvgOnAction" prefHeight="26.0" prefWidth="126.0" style="-fx-background-radius: 50;" text="Find Average Salary">
+               <effect>
+                  <DropShadow height="6.0" radius="3.75" width="11.0">
+                     <color>
+                        <Color green="0.8166666626930237" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect></Button>
+            <TextArea fx:id="avgArea" layoutX="892.0" layoutY="147.0" prefHeight="58.0" prefWidth="159.0" promptText="Average Salary For Emplyees" />
+            <TextArea fx:id="MaxArea" layoutX="1060.0" layoutY="137.0" prefHeight="75.0" prefWidth="171.0" promptText="Maximum Salary and the employee" />
+            <Button fx:id="FindMax" layoutX="1092.0" layoutY="220.0" mnemonicParsing="false" onAction="#FindMaxOnAction" prefHeight="26.0" prefWidth="116.0" style="-fx-background-radius: 50;" text="Find Max Salary">
+               <effect>
+                  <DropShadow height="8.5" radius="4.375" width="11.0">
+                     <color>
+                        <Color green="0.8833333253860474" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect></Button>
+            <TextField fx:id="updatedAddress" layoutX="241.0" layoutY="72.0" prefHeight="31.0" prefWidth="125.0" promptText="New Address" />
+            <TextField fx:id="updatedGender" layoutX="677.0" layoutY="74.0" prefHeight="31.0" prefWidth="109.0" promptText="Gender" />
+            <Label layoutX="16.0" layoutY="167.0" prefHeight="34.0" prefWidth="221.0" text="Delete An Employee">
+               <font>
+                  <Font name="Maiandra GD" size="19.0" />
+               </font>
+            </Label>
+            <Line endX="647.5999755859375" endY="-59.0" layoutX="-453.0" layoutY="226.0" startX="647.5999755859375" startY="-19.00000762939453" stroke="#333131" />
+            <Button fx:id="deleteBtn" layoutX="500.0" layoutY="170.0" mnemonicParsing="false" onAction="#deleteOnAction" prefHeight="34.0" prefWidth="125.0" style="-fx-background-radius: 50;" stylesheets="@application.css" text="     DELETE">
+               <font>
+                  <Font name="Maiandra GD" size="17.0" />
+               </font>
+               <effect>
+                  <DropShadow height="13.98" radius="5.905" width="11.64" />
+               </effect>
+            </Button>
+            <Button fx:id="AddBtn" layoutX="960.0" layoutY="303.0" mnemonicParsing="false" onAction="#addOnAction" prefHeight="34.0" prefWidth="125.0" style="-fx-background-radius: 50;" stylesheets="@application.css" text="         ADD">
+               <font>
+                  <Font name="Maiandra GD" size="17.0" />
+               </font>
+               <effect>
+                  <DropShadow height="13.98" radius="5.905" width="11.64" />
+               </effect>
+            </Button>
+            <Label layoutX="12.0" layoutY="282.0" prefHeight="34.0" prefWidth="213.0" text="Add New Employee">
+               <font>
+                  <Font name="Maiandra GD" size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="addedPhone" layoutX="411.0" layoutY="327.0" prefHeight="30.0" prefWidth="153.0" promptText="Phone Number" />
+            <PasswordField fx:id="addedPassword" layoutX="710.0" layoutY="330.0" promptText="Password" />
+            <TextField fx:id="addedSalary" layoutX="272.0" layoutY="325.0" prefHeight="31.0" prefWidth="125.0" promptText="Salary" />
+            <Line endX="647.199951171875" endY="-61.000003814697266" layoutX="-456.0" layoutY="343.0" startX="647.199951171875" startY="-17.400009155273438" stroke="#333131" />
+            <TextField fx:id="addedID" layoutX="266.0" layoutY="279.0" prefHeight="31.0" prefWidth="114.0" promptText="ID" />
+            <DatePicker fx:id="addedBirthDate" layoutX="563.0" layoutY="279.0" prefHeight="32.0" prefWidth="161.0" promptText="Birthdate" />
+            <TextField fx:id="addedName" layoutX="406.0" layoutY="279.0" prefHeight="31.0" prefWidth="134.0" promptText="Name" />
+            <TextField fx:id="addedAddress" layoutX="747.0" layoutY="279.0" prefHeight="31.0" prefWidth="125.0" promptText="Address" />
+            <TextField fx:id="addedGender" layoutX="576.0" layoutY="327.0" prefHeight="31.0" prefWidth="109.0" promptText="Gender" />
+            <Line endX="1342.800048828125" endY="-71.33338165283203" layoutX="-125.0" layoutY="334.0" startX="125.00001525878906" startY="-71.3333740234375" stroke="#000a94" strokeWidth="0.5">
+               <effect>
+                  <BoxBlur />
+               </effect>
+            </Line>
+            <Label blendMode="DARKEN" layoutX="16.0" layoutY="420.0" prefHeight="34.0" prefWidth="221.0" text="Search For An Employee">
+               <font>
+                  <Font name="Maiandra GD" size="19.0" />
+               </font>
+            </Label>
+            <Line endX="647.199951171875" endY="-61.000003814697266" layoutX="-421.0" layoutY="481.0" startX="647.199951171875" startY="-17.400009155273438" stroke="#333131" />
+            <Button fx:id="SearchBtn" layoutX="577.0" layoutY="425.0" mnemonicParsing="false" onAction="#searchOnAction" prefHeight="34.0" prefWidth="93.0" style="-fx-background-radius: 50;" stylesheets="@application.css" text="    Search">
+               <font>
+                  <Font name="Maiandra GD" size="17.0" />
+               </font>
+               <effect>
+                  <DropShadow height="12.81" radius="5.612500000000001" width="11.64">
+                     <color>
+                        <Color red="0.5052631497383118" green="0.4884210526943207" />
+                     </color></DropShadow>
+               </effect>
+            </Button>
+            <Button fx:id="backBtn" layoutX="1079.0" layoutY="425.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="34.0" prefWidth="103.0" style="-fx-background-radius: 50;" stylesheets="@application.css" text="Back">
+               <font>
+                  <Font name="Maiandra GD" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow height="12.81" radius="5.612500000000001" width="11.64">
+                     <color>
+                        <Color red="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Line endX="1342.800048828125" endY="-26.00000762939453" layoutX="-596.0" layoutY="153.0" startX="1342.800048828125" startY="110.37374877929688" stroke="#000a94" strokeWidth="0.5">
+               <effect>
+                  <BoxBlur />
+               </effect>
+            </Line>
+            <Label layoutX="752.0" layoutY="140.0" prefHeight="34.0" prefWidth="221.0" text="About Employees:" underline="true">
+               <font>
+                  <Font name="Maiandra GD" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow height="6.96" radius="20.6875" spread="0.8" width="77.79">
+                     <color>
+                        <Color red="0.7037037014961243" green="0.8962963223457336" blue="1.0" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Line endX="1342.800048828125" endY="-71.33338165283203" layoutX="-125.0" layoutY="474.0" startX="125.00001525878906" startY="-71.3333740234375" stroke="#000a94" strokeWidth="0.5">
+               <effect>
+                  <BoxBlur />
+               </effect>
+            </Line>
+            <AnchorPane layoutX="1239.0" layoutY="36.0" prefHeight="405.0" prefWidth="251.0">
+               <children>
+                  <ImageView fitHeight="365.0" fitWidth="249.0" layoutX="-15.0" layoutY="33.0" AnchorPane.rightAnchor="5.0">
+                     <image>
+                        <Image url="@hotcoffee.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label fx:id="msg" alignment="CENTER" contentDisplay="CENTER" layoutX="903.0" layoutY="332.0" prefHeight="67.0" prefWidth="239.0" textFill="RED">
+               <font>
+                  <Font name="Arial Narrow Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="msg2" alignment="CENTER" contentDisplay="CENTER" layoutX="958.0" layoutY="70.0" prefHeight="67.0" prefWidth="239.0" textFill="RED">
+               <font>
+                  <Font name="Arial Narrow Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="msg3" alignment="CENTER" contentDisplay="CENTER" layoutX="439.0" layoutY="194.0" prefHeight="67.0" prefWidth="239.0" textFill="RED">
+               <font>
+                  <Font name="Arial Narrow Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="37.0" layoutX="512.0" layoutY="172.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@error.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="37.0" layoutX="1081.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@back.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="37.0" layoutX="577.0" layoutY="427.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@search.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="37.0" layoutX="974.0" layoutY="304.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@add.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="37.0" layoutX="1023.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@update.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="300.0" fitWidth="268.0" layoutX="1222.0" layoutY="476.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@employee.png" />
+               </image>
+            </ImageView>
+
+			</children>
+		</AnchorPane>
+   </left>
+</BorderPane>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="394.0" style="-fx-background-color: magenta;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.additemToOrderController">
+   <right>
+      <AnchorPane prefHeight="450.0" prefWidth="471.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="addToCart" contentDisplay="RIGHT" layoutX="237.0" layoutY="527.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="40.0" prefWidth="134.0" styleClass="button2" stylesheets="@application.css" text="        Add Item" />
+            <Button fx:id="cancelItem" contentDisplay="RIGHT" layoutX="27.0" layoutY="527.0" mnemonicParsing="false" onAction="#cancelItem" prefHeight="40.0" prefWidth="152.0" styleClass="button2" stylesheets="@application.css" text="      Cancel Item" />
+            <Spinner fx:id="item_quant" editable="true" layoutX="137.0" layoutY="428.0" prefHeight="36.0" prefWidth="176.0" />
+            <Text layoutX="78.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity" wrappingWidth="49.538330078125">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <HBox fx:id="parcode" alignment="CENTER" layoutX="62.0" layoutY="311.0" prefHeight="52.0" prefWidth="282.0" spacing="7.0" />
+            <HBox fx:id="itemName" alignment="CENTER" layoutX="82.0" layoutY="353.0" prefHeight="52.0" prefWidth="282.0">
+               <children>
+                  <TextField fx:id="Item_name" prefHeight="36.0" prefWidth="176.0" promptText="Item Name" style="-fx-background-radius: 40;" />
+               </children>
+            </HBox>
+            <TextField fx:id="item_parcode" layoutX="137.0" layoutY="299.0" prefHeight="36.0" prefWidth="176.0" promptText="Item id" style="-fx-background-radius: 40;" />
+            <ImageView fitHeight="37.0" fitWidth="48.0" layoutX="33.0" layoutY="529.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@error.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="38.0" layoutX="244.0" layoutY="529.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@add.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="175.0" fitWidth="183.0" layoutX="116.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@addtocart.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
